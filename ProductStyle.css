@@ -4,11 +4,18 @@ body {
     font-family: Verdana, sans-serif;
 }
 * {box-sizing: border-box;}
-
+.contain {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 7%;
+}
 .product-view {
     position: relative;
-    margin: 15px 7%;
     display: flex;
+    align-items: center;
+    width: 75%;
 }
 .pdct-pics {
     position: relative;
@@ -16,7 +23,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 25%;
+    width: 35%;
 }
 .main-pic {
     position: relative;
@@ -58,6 +65,295 @@ body {
 }
 .small-pics img:hover {
     opacity: 0.7;
-    box-shadow: 0 0 5px black;
-    width: 110%;
+    box-shadow: 0 0 3px black;
+    padding: 9px;
+}
+
+.pdct-info {
+    box-shadow: 0 0 5px gray;
+    padding: 10px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+.pdct-name {
+    font-weight: bold;
+    font-size: x-large;
+    margin: 7px 0;
+}
+.pdct-price {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.pdct-price div {
+    margin: 0 6px;
+}
+.old-price {
+    text-decoration:line-through;
+    color:rgb(95, 90, 90);
+}
+.discount {
+    font-size: small;
+    color:red;
+    font-weight: bold;
+}
+.new-price {
+    font-size: large;
+    font-weight: bold;
+    color: rgb(1, 107, 1);
+}
+.pdct-descr {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    padding: 5px;
+}
+.descr {
+    display: flex;
+    padding: 18px 0;
+    border-bottom: 1px solid rgb(150, 150, 150);
+}
+.descr-key {
+    width:40%;
+    color:rgb(66, 66, 66);
+    font-weight: bolder;
+}
+.descr-value {
+    width: 60%;
+    color:rgb(32, 32, 32);
+}
+#brand {
+    color:rgb(50, 123, 182);
+    cursor: pointer;
+}
+#brand:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.last-descr {
+    border:none;
+}
+.pdct-quantity {
+    display: flex;
+    align-items: center;
+}
+.pdct-quantity div {
+    margin: 0 5px;
+}
+#quantity {
+    font-size: large;
+}
+.add-pdct {
+    font-size:medium;
+    padding: 5px;
+    border-radius: 7px;
+    background: rgb(135, 221, 147);
+    border: 2px solid white;
+    transition: all 0.1s;
+}
+.add-pdct:active {
+    color:white;
+    background-color: rgb(18, 92, 84);
+    border: 2px solid black;
+}
+.buy-section {
+    margin-top: 10px;
+    display: flex;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.buy-section:hover > #buy-btn {
+    color:white;
+    background-color: rgb(18, 92, 84);
+    box-shadow: 0 0 5px rgb(18, 92, 84);
+}
+.buy-section:hover > #buy-btn .fa-cart-plus {
+    color: white;
+}
+.fa-cart-plus {
+    transition: all .3s;
+}
+#buy-btn {
+    color: rgb(18, 92, 84);
+    font-size: large;
+    margin: 15px 20%;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+    font-weight:bolder;
+    background: rgb(154, 221, 163);
+    transition: all .3s;
+}
+
+.idk {
+    width: 20%;
+    box-shadow: 0 0 5px rgb(173, 173, 173);
+    background: rgb(245, 245, 245);
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.most-sold {
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all .2s;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.most-sold:hover {
+    background-color: white;
+    border: none;
+    box-shadow: 0 0 4px black;
+}
+.most-sold-pic {
+    width: 30%;
+    border-right: 1px solid black;
+    padding:3px;
+}
+.most-sold-pic img {
+    width: 100%;
+}
+.most-sold-info {
+    width: 70%;
+    margin-left: 8px;
+}
+.most-sold-name {
+    font-size: large;
+    font-weight: bold;
+    transition: text-decoration .4s;
+}
+.most-sold-name:hover {
+    text-decoration: underline;
+}
+.most-sold-name:active {
+    color: rgb(18, 92, 84);
+}
+.most-sold-descr {
+    color:rgb(65, 65, 65);
+    font-family: "Times New Roman", Times, serif;
+}
+.most-sold-price {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.most-sold-price div {
+    margin: 2px 4px;
+}
+
+
+.footer {
+    margin: 15px 0 0 0;
+    background-color: rgb(18, 92, 84);
+    display:flex;
+    justify-content: space-around;
+    padding: 30px 10%;
+}
+.section {
+    flex-basis: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    text-align: justify;
+    color: white;
+}
+
+
+.login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    padding: 20px;
+    border-radius: 9px;
+}
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login form input {
+    margin: 8px 0;
+    width: 200px;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .contain {
+        flex-direction: column;
+    }
+    .product-view {
+        width: 100%;
+    }
+    .pdct-pics {
+        grid-area: pics;
+        width: 30%;
+    }
+    .pdct-info {
+        grid-area: info;
+        width: 70%;
+    }
+    .idk {
+        margin: 0;
+        grid-area: products;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .contain {
+        margin: 15px 0;
+    }
+    .pdct-pics {
+        margin: 5px;
+        width: 50%;
+    }
+    #main-pdct-pic {
+        padding: 0;
+        box-shadow: 0 0 2px gray;
+    }
+    .product-view {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+    .pdct-info {
+        width: 95%;
+    }
+    .most-sold-price div {
+        font-size: smaller;
+    }
+    .idk {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        flex-direction: column;
+    }
+    .section {
+        margin: 20px 0;
+    }
 }

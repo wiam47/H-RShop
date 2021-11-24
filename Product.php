@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ProductStyle.css">
+    <script src="ProductJs.js"></script>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
                 </button>
             </div>
             <div class="icon">
-                <a href="#"><i class="fa fa-user"></i></a>
+                <a href="#" id="login_icon"><i class="fa fa-user"></i></a>
             </div>
             <div class="icon">
                 <a href="#"><i class="fa fa-shopping-basket"></i></a>
@@ -176,14 +177,22 @@
                 </div>
             </div>
         </div>
-        <div class="login">
-            <form action="">
-                <label for="">Login</label>
-                <input type="text" name="email" id="email" placeholder="Email">
-                <input type="text" name="password" id="password" placeholder="Password">
-                <input type="submit" name="submit-login" id="submit-login">
-            </form>
-        </div>
+    </div>
+
+    <div id="login">
+        <form action="">
+            <div class="close-button"><img src="Photos/close_icon.png" alt="Close"></div>
+            <h2>Log in to your account</h2>
+            <div class="input-section">
+                <label for="email">Email :</label>
+                <input class="text-field" type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-section">
+                <label for="password">Password :</label>
+                <input class="text-field" type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <input type="submit" name="submit-login" id="submit-login" value="Log In">
+        </form>
     </div>
 
     <div class="footer">
@@ -214,8 +223,18 @@
     </div>
 
 
+    <script>
+        document.getElementById("login_icon").addEventListener("click", function() {
+            document.getElementById("login").style.display = "flex";
+            document.querySelector("body").style.overflowY = "hidden";
+        });
 
-    <script src="ProductJs.js"></script>
+        document.querySelector(".close-button").addEventListener("click", function() {
+            document.getElementById('login').style.display = "none";
+            document.querySelector('body').style.overflowY = "scroll";
+        });
+    </script>
+    
 </body>
 
 </html>

@@ -100,6 +100,7 @@ body {
 
 ::placeholder{
     color: white;
+    /*Add opacity so the placeholder and the real text don't look the same*/
 }
 
 #logo {

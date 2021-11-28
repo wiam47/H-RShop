@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR-Shop</title>
+    <link rel="icon" href="Photos/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ProductStyle.css">
-    <script src="ProductJs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -49,11 +50,13 @@
         <div class="product-view">
             <div class="pdct-pics">
                 <div class="main-pic">
+                    <!-- Source of the selected img from small images will be here-->
                     <img id="main-pdct-pic" src="Photos/montre1.jpg" alt="product">
                     <i id="magnify" class="fa fa-search-plus"></i>
                 </div>
+                <!--the selected img will have class="select"-->
                 <div class="small-pics">
-                    <img src="Photos/montre1.jpg" alt="product">
+                    <img class="selected-pic" src="Photos/montre1.jpg" alt="product">
                     <img src="Photos/montre1.jpg" alt="product">
                     <img src="Photos/montre1.jpg" alt="product">
                 </div>
@@ -68,57 +71,44 @@
                     <div class="new-price">499$</div>
                 </div>
                 <div class="pdct-descr">
-                    <div class="descr">
-                        <div class="descr-key">
-                            brand:
+                <div id="options_title">Available Options :</div>
+                    <!-- show only the divs .color or .shirt-size or .lowerbody-size depends on the product's category or variation -->
+                    <div class="descr color">
+                        <!--test-->
+                        <!-- For options the one clicked will have the class "selected..." and the one who had a "selected..." class will have "option" instead-->
+                        <h4 class="title-option">Pick a color :</h4>
+                        <!-- Add a laber to each color -->
+                        <div class="options">
+                            <div class="option red" style="background-color: red"></div>
+                            <div class="option green" style="background-color: green"></div>
+                            <div class="option blue" style="background-color: blue"></div>
+                            <div class="option pink" style="background-color: pink"></div>
                         </div>
-                        <div id="brand" class="descr-value">
-                            Rolex
-                        </div>
+                        <!--test-->
                     </div>
-                    <div class="descr">
-                        <div class="descr-key">
-                            Model:
+                    <div class="descr top-size">
+                        <!--test-->
+                        <h4 class="title-option">Pick a size :</h4>
+                        <div class="options">
+                            <div class="option S-size">XS</div>
+                            <div class="option S-size">S</div>
+                            <div class="option M-size">M</div>
+                            <div class="option L-size">L</div>
+                            <div class="option XL-size">XL</div>
                         </div>
-                        <div class="descr-value">
-                            fasdfad
-                        </div>
+                        <!--test-->
                     </div>
-                    <div class="descr">
-                        <div class="descr-key">
-                        Box:
+                    <div class="descr lowerbody-size">
+                        <!--test-->
+                        <h4 class="title-option">Pick a size :</h4>
+                        <div class="options">
+                            <div class="option S-size">25</div>
+                            <div class="option S-size">26</div>
+                            <div class="option M-size">27</div>
+                            <div class="option L-size">28</div>
+                            <div class="option XL-size">29</div>
                         </div>
-                        <div class="descr-value">
-                            Diameter : 36mm,<br>
-                            Stainless steel<br>
-                            Golden, Grey
-                        </div>
-                    </div>
-                    <div class="descr">
-                        <div class="descr-key">
-                        Cadre:
-                        </div>
-                        <div class="descr-value">
-                            Glass : mineral<br>
-                            Blue
-                        </div>
-                    </div>
-                    <div class="descr">
-                        <div class="descr-key">
-                        Bracelet:
-                        </div>
-                        <div class="descr-value">
-                            Stainless steel<br>
-                            Golden
-                        </div>
-                    </div>
-                    <div class="descr last-descr">
-                        <div class="descr-key">
-                            Gender:
-                        </div>
-                        <div class="descr-value">
-                            Men
-                        </div>
+                        <!--test-->
                     </div>
                 </div>
                 <div class="pdct-quantity">
@@ -126,9 +116,18 @@
                     <div onclick="pdctQuantity('minus')"><i class="fa fa-minus add-pdct"></i></div>
                     <div id="quantity">1</div>
                     <div onclick="pdctQuantity('add')"><i  class="fa fa-plus add-pdct"></i></div>
+                    <!-- Check the stock and put it in #stock_limit then the #quantity should not be greater than it-->
+                    <div id="stock"><span id="stock_limit">9</span> in stock</div>
                 </div>
                 <div class="buy-section">
                     <div id="buy-btn" onclick="buy()">Add To Cart <i class="fa fa-cart-plus"></i></div>
+                </div>
+                <hr>
+                <div id="share_product">
+                    <div style="margin-right: 10px; font-weight: bold;">Share : </div>
+                    <div><i id="fcb_share" class="fa fa-facebook share-btn"></i></div>
+                    <div><i id="twitter_share" class="fa fa-twitter share-btn"></i></div>
+                    <div><i id="copy_link" class="fa fa-plus share-btn"></i></div>
                 </div>
             </div>
         </div>
@@ -179,6 +178,11 @@
         </div>
     </div>
 
+    <div id="reviews">
+        <h3>Reviews :</h3>
+
+    </div>
+
     <div id="login">
         <form action="">
             <div class="close-button"><img src="Photos/close_icon.png" alt="Close"></div>
@@ -223,17 +227,8 @@
     </div>
 
 
-    <script>
-        document.getElementById("login_icon").addEventListener("click", function() {
-            document.getElementById("login").style.display = "flex";
-            document.querySelector("body").style.overflowY = "hidden";
-        });
-
-        document.querySelector(".close-button").addEventListener("click", function() {
-            document.getElementById('login').style.display = "none";
-            document.querySelector('body').style.overflowY = "scroll";
-        });
-    </script>
+    <script src="ProductJs.js"></script>
+    
     
 </body>
 

@@ -18,7 +18,7 @@ body {
     color: rgb(18, 92, 84);
 }
 
-.fa-user:hover, .fa-shopping-basket:hover , .fa-globe:hover{
+.fa-shopping-basket:hover , .fa-globe:hover{
     color: rgba(19, 173, 122, 0.925);
 }
 
@@ -26,11 +26,25 @@ body {
     float: right;
     display: flex;
     align-items: center;
+}
 
+#cart_counter {
+  position: absolute;
+  top: 2px;
+  right:2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 1.1vw;
+  text-align: center;
+  font-weight: bold;
 }
 
 .icon{
     font-size: 25px;
+    position: relative;
 }
 
 .icon a {
@@ -38,10 +52,15 @@ body {
     margin: 0 10px;
  }
 
-
- .fa-search{
+.fa-search{
      color: white;
- }
+}
+ 
+.fa fa-shopping-basket{
+  position: relative;
+  width:30px; 
+    height:30px;
+}
 
 .searchBox {
     background: rgb(18, 92, 84);
@@ -62,7 +81,7 @@ body {
 
 .searchBox:hover > .searchButton .fa-search {
     color:rgb(18, 92, 84);
-  }
+}
 
 .searchButton {
     color: white;
@@ -88,7 +107,6 @@ body {
     transition: 0.4s;
     line-height: 40px;
     width: 0px;
-
 }
 
 @media screen and (max-width: 620px) {
@@ -103,61 +121,28 @@ body {
 }
 
 #logo {
-    display: block;
+    display: flex;
     margin-left: absolute;
     margin-right: auto;
     width: 50%;
-  }
+}
 
-
-  * {box-sizing: border-box}
+* {box-sizing: border-box}
   body {font-family: Arial, Helvetica, sans-serif;}
-  
-  .navbar {
-    width: 100%;
-    background-color:rgb(18, 92, 84);
-    overflow: auto;
-  }
-  
-  .navbar a {
-    float: left;
-    padding: 19px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    width: 20%; 
-    text-align: center;
-  }
-  
-  .navbar a:hover {
-    background-color: rgba(44, 143, 110, 0.925);
-  }
-  
-  
-  @media screen and (max-width: 500px) {
-    .navbar a {
-      float: none;
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
 
-  .slide-show{
+.slide-show{
       margin: 0 4%;
-  }
-
-
+}
 
 .mySlides {
     display: none;
 }
 
-
 .slideshow-container {
   position: relative;
   margin: 0;
 }
+
 .mySlides img {
     width: 100%;
     height: 650px;
@@ -172,6 +157,7 @@ body {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+
 .dots {
 	position:absolute;
     left: 47%;
@@ -182,11 +168,131 @@ body {
   background-color: #717171;
 }
 
-.grid{
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+.menu-products{
+  display: flex;
+  align-items: flex-start;
+  margin: 0 2%;
+  padding: 20px;
+  position: relative; 
+  background-color: #eee;
 }
 
-.grid > div{
-  padding: 1em;
+.titreMenu{
+background-color: #bbb;
+padding: 10px;
+font-weight: bold;
+font-size: xx-large;
+text-align: center;
 }
+
+.menu{
+  border: none;
+  background-color: white;
+  width: 20%;
+  margin-right: 75px;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+#myMenu{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+#myMenu .category {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+#myMenu .category:hover {
+  background-color:#eee;
+  box-shadow: 0 0 5px #333;
+}
+
+.products {
+  border-radius: 10px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  background-color: white;
+  padding: 10px;
+}
+
+.product{
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 5px 10px 18px #888888;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative; 
+  cursor: pointer; 
+}
+
+.product-img{
+  width: 100%;
+  border-bottom: 1px solid;
+  padding: 10px;
+}
+
+.product-img:hover{
+  opacity: 0.3;
+}
+
+.product-name{
+  margin: 10px;
+  font-family: serif ;
+  font-size: 20px;
+}
+
+.line {
+  text-decoration: line-through;
+  color: #bbb;
+  display: inline;
+}
+
+.product-price{
+  display: flex;
+}
+
+.product-price div {
+  margin: 0 4px;
+}
+
+.new-price{
+  color: rgba(45, 196, 146, 0.925);
+  font-weight: bold;
+}
+
+.pourcentage{
+  color: crimson;
+  font-size: 15px;
+}
+
+.components{
+  visibility: hidden;
+  position: absolute;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  background-color: #eee;
+}
+.component {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+

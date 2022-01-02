@@ -18,7 +18,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
-    width: 75%;
+    width: 100%;
 }
 .pdct-pics {
     position: relative;
@@ -26,7 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 35%;
+    width: 25%;
 }
 .main-pic {
     position: relative;
@@ -43,6 +43,7 @@ body {
     width:100%;
     padding: 20px;
     transition: all 0.5s;
+    border: 1px solid #aaaaaa50;
 }
 #magnify {
     position: absolute;
@@ -77,7 +78,7 @@ body {
 .pdct-info {
     box-shadow: 0 0 5px gray;
     padding: 10px;
-    width: 65%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     margin: 0 10px;
@@ -203,7 +204,8 @@ body {
 .buy-section {
     margin-top: 10px;
     display: flex;
-    width: 100%;
+    width: 60%;
+    margin: 15px 20%;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -222,7 +224,7 @@ body {
 #buy-btn {
     color: rgb(18, 92, 84);
     font-size: large;
-    margin: 15px 20%;
+    margin: 0;
     padding: 15px;
     border-radius: 8px;
     width: 100%;
@@ -264,7 +266,7 @@ body {
     border-color: rgb(154, 221, 163);
 }
 
-.idk {
+/* .idk {
     width: 20%;
     box-shadow: 0 0 5px rgb(173, 173, 173);
     background: rgb(245, 245, 245);
@@ -322,15 +324,128 @@ body {
 }
 .most-sold-price div {
     margin: 2px 4px;
+} */
+
+#recommended-container {
+    position: relative;
+    display: none;
+}
+#goLeft, #goRight {
+    width:30px;
+    height:40px;
+    background-color: rgb(154, 221, 163);
+    color:rgb(18, 92, 84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 100%;
+    top: 50%;
+    transform:translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    font-weight: 600;
+}
+#goLeft:hover, #goRight:hover {
+    background-color: rgb(18, 92, 84);
+    color: #fff;
+}
+#goLeft {
+    left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#goRight {
+    right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#recommended {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    border-top: 1px solid #77777725;
+    border-bottom: 1px solid #77777725;
+    border-radius: 9px;
+    margin-top: 20px;
+    position: relative;
+}
+#recommended::-webkit-scrollbar {
+    display: none;
+}
+.splide__track {
+    width: 100%;
+}
+.splide__list {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    border-top: 1px solid #77777725;
+    border-bottom: 1px solid #77777725;
+    border-radius: 9px;
+    margin-top: 20px;
+    position: relative;
+}
+.splide__slide {
+    min-width: 200px;
+    margin: 4px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 3px #777;
+    box-sizing: border-box;
+}
+.recommended-product {
+    min-width: 200px;
+    margin: 4px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 3px #777;
+}
+.rcmnd-img {
+    height: 100px;
+}
+.rcmnd-title {
+    font-weight: 900;
+    font-size: larger;
+}
+.rcmnd-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
+    align-items: center;
+}
+.rcmnd-old-price {
+    display: none;
+}
+.rcmnd-discount {
+    background-color: #f00;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: small;
+    display: none;
 }
 
-
 .footer {
-    margin: 15px 0 0 0;
+    margin: 75px 0 0 0;
     background-color: rgb(18, 92, 84);
     display:flex;
     justify-content: space-around;
     padding: 30px 10%;
+    
 }
 .section {
     flex-basis: 33.33%;
@@ -484,6 +599,13 @@ body {
     .idk {
         display: grid;
         grid-template-columns: 50% 50%;
+    }
+
+    .splide {
+        display: none;
+    }
+    #recommended-container {
+        display:block;
     }
 
     

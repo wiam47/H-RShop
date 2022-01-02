@@ -1,3 +1,4 @@
+
 function buy() {
   var Qtt = document.getElementById('quantity').textContent;
   
@@ -16,7 +17,17 @@ function pdctQuantity(method) {
 }
 
 
+
 $(document).ready(function() {
+  
+  $('.rcmnd-discount').each(function(obj) {
+    if ($(this).text() != "0" && $(this).text() != "") {
+      $(this).css('display', 'block');
+      $(this).siblings('.rcmnd-price').children('.rcmnd-old-price').css('display', 'block');
+    };
+  });
+
+  
   $(".color .options .option:first-child").addClass("selected-color-option");
   $(".color .options .option").click(function() {
     $(".selected-color-option").addClass("option");
@@ -40,4 +51,7 @@ $(document).ready(function() {
     $(this).removeClass("option");
     $(this).addClass("selected-size-option");
   });
+
+  
 });
+

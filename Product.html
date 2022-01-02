@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR-Shop</title>
     <link rel="icon" href="Photos/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="splide-3.6.9/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ProductStyle.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="splide-3.6.9/dist/js/splide.min.js"></script>
 </head>
 
 <body>
@@ -132,7 +134,7 @@
             </div>
         </div>
         
-        <div class="idk">
+        <!-- <div class="idk">
             <div class="most-sold">
                 <div class="most-sold-pic">
                     <img src="Photos/montre1.jpg" alt="Most bought product">
@@ -175,13 +177,195 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+    </div>
+
+    <h2 style="margin-top: 75px;">Recommended For You</h2>
+
+    <div class="splide" style="color: black;">
+
+        <div class="splide__arrows">
+            <button id="goLeft" class="splide__arrow splide__arrow--prev">L</button>
+            <button id="goRight" class="splide__arrow splide__arrow--next">R</button>
+        </div>
+
+        <div class="splide__track">
+            <ul class="splide__list">
+                <div class="splide__slide">
+                    <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                    <div class="rcmnd-title">Rolex 2</div>
+                    <div class="rcmnd-price">
+                        <div class="rcmnd-old-price old-price">849$</div>
+                        <div class="rcmnd-new-price new-price">599$</div>
+                    </div>
+                    <div class="rcmnd-discount">-20%</div>
+                </div>
+        
+                <div class="splide__slide">
+                    <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                    <div class="rcmnd-title">Rolex 2</div>
+                    <div class="rcmnd-price">
+                        <div class="rcmnd-old-price old-price">849$</div>
+                        <div class="rcmnd-new-price new-price">599$</div>
+                    </div>
+                    <div class="rcmnd-discount">0</div>
+                </div>
+        
+                <div class="splide__slide">
+                    <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                    <div class="rcmnd-title">Rolex 2</div>
+                    <div class="rcmnd-price">
+                        <div class="rcmnd-old-price old-price">849$</div>
+                        <div class="rcmnd-new-price new-price">599$</div>
+                    </div>
+                    <div class="rcmnd-discount">-20%</div>
+                </div>
+        
+                <div class="splide__slide">
+                    <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                    <div class="rcmnd-title">Rolex 2</div>
+                    <div class="rcmnd-price">
+                        <div class="rcmnd-old-price old-price">849$</div>
+                        <div class="rcmnd-new-price new-price">599$</div>
+                    </div>
+                    <div class="rcmnd-discount">-20%</div>
+                </div>
+        
+                <div class="splide__slide">
+                    <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                    <div class="rcmnd-title">Rolex 2</div>
+                    <div class="rcmnd-price">
+                        <div class="rcmnd-old-price old-price">849$</div>
+                        <div class="rcmnd-new-price new-price">599$</div>
+                    </div>
+                    <div class="rcmnd-discount">-20%</div>
+                </div>
+        
+                <div class="splide__slide">
+                    <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                    <div class="rcmnd-title">Rolex 2</div>
+                    <div class="rcmnd-price">
+                        <div class="rcmnd-old-price old-price">849$</div>
+                        <div class="rcmnd-new-price new-price">599$</div>
+                    </div>
+                    <div class="rcmnd-discount">-20%</div>
+                </div>
+        
+                <div class="splide__slide">
+                    <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                    <div class="rcmnd-title">Rolex 2</div>
+                    <div class="rcmnd-price">
+                        <div class="rcmnd-old-price old-price">849$</div>
+                        <div class="rcmnd-new-price new-price">599$</div>
+                    </div>
+                    <div class="rcmnd-discount">-20%</div>
+                </div>
+        
+                <div class="splide__slide">
+                    <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                    <div class="rcmnd-title">Rolex 2</div>
+                    <div class="rcmnd-price">
+                        <div class="rcmnd-old-price old-price">849$</div>
+                        <div class="rcmnd-new-price new-price">599$</div>
+                    </div>
+                    <div class="rcmnd-discount">-20%</div>
+                </div>
+            </ul>
         </div>
     </div>
 
-    <div id="reviews">
+    <div id="recommended-container">
+
+        <div id="recommended">
+    
+            <div class="recommended-product">
+                <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                <div class="rcmnd-title">Rolex 2</div>
+                <div class="rcmnd-price">
+                    <div class="rcmnd-old-price old-price">849$</div>
+                    <div class="rcmnd-new-price new-price">599$</div>
+                </div>
+                <div class="rcmnd-discount">-20%</div>
+            </div>
+    
+            <div class="recommended-product">
+                <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                <div class="rcmnd-title">Rolex 2</div>
+                <div class="rcmnd-price">
+                    <div class="rcmnd-old-price old-price">849$</div>
+                    <div class="rcmnd-new-price new-price">599$</div>
+                </div>
+                <div class="rcmnd-discount">0</div>
+            </div>
+    
+            <div class="recommended-product">
+                <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                <div class="rcmnd-title">Rolex 2</div>
+                <div class="rcmnd-price">
+                    <div class="rcmnd-old-price old-price">849$</div>
+                    <div class="rcmnd-new-price new-price">599$</div>
+                </div>
+                <div class="rcmnd-discount">-20%</div>
+            </div>
+    
+            <div class="recommended-product">
+                <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                <div class="rcmnd-title">Rolex 2</div>
+                <div class="rcmnd-price">
+                    <div class="rcmnd-old-price old-price">849$</div>
+                    <div class="rcmnd-new-price new-price">599$</div>
+                </div>
+                <div class="rcmnd-discount">-20%</div>
+            </div>
+    
+            <div class="recommended-product">
+                <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                <div class="rcmnd-title">Rolex 2</div>
+                <div class="rcmnd-price">
+                    <div class="rcmnd-old-price old-price">849$</div>
+                    <div class="rcmnd-new-price new-price">599$</div>
+                </div>
+                <div class="rcmnd-discount">-20%</div>
+            </div>
+    
+            <div class="recommended-product">
+                <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                <div class="rcmnd-title">Rolex 2</div>
+                <div class="rcmnd-price">
+                    <div class="rcmnd-old-price old-price">849$</div>
+                    <div class="rcmnd-new-price new-price">599$</div>
+                </div>
+                <div class="rcmnd-discount">-20%</div>
+            </div>
+    
+            <div class="recommended-product">
+                <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                <div class="rcmnd-title">Rolex 2</div>
+                <div class="rcmnd-price">
+                    <div class="rcmnd-old-price old-price">849$</div>
+                    <div class="rcmnd-new-price new-price">599$</div>
+                </div>
+                <div class="rcmnd-discount">-20%</div>
+            </div>
+    
+            <div class="recommended-product">
+                <img class="rcmnd-img" src="Photos/montre2.jpg" alt="Lorem Ipsum">
+                <div class="rcmnd-title">Rolex 2</div>
+                <div class="rcmnd-price">
+                    <div class="rcmnd-old-price old-price">849$</div>
+                    <div class="rcmnd-new-price new-price">599$</div>
+                </div>
+                <div class="rcmnd-discount">-20%</div>
+            </div>
+    
+        </div>
+    </div>
+    
+
+    <!-- <div id="reviews">
         <h3>Reviews :</h3>
 
-    </div>
+    </div> -->
 
     <div id="login">
         <form action="">
@@ -228,6 +412,19 @@
 
 
     <script src="ProductJs.js"></script>
+    <script>
+        var splide = new Splide( '.splide', {
+            rewind  : true,
+            perPage : 5,
+            perMove : 1,
+            cover   : false,
+            lazyLoad: 'nearby',
+            drag    : 'free',
+            breakpoints: {
+                width: '1000px',
+            },
+        } ).mount();
+    </script>
     
     
 </body>

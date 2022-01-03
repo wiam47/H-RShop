@@ -126,3 +126,34 @@ body {
     margin-right: auto;
     width: 50%;
 }
+
+.navbar {
+    width: 100%;
+    background-color:rgb(18, 92, 84);
+    overflow: auto;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 19px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 20%; 
+    text-align: center;
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(44, 143, 110, 0.925);
+    font-weight: 600;
+  }
+  
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }

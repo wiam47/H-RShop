@@ -1,80 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR-Shop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR-Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="header">
+  <div class="header">
     <div class="logo">
-        <a href="index.php"><img id="logo" src="photos/logo2.png"></a>
+      <a href="index.php"><img id="logo" src="photos/logo2.png"></a>
     </div>
-    <div class="icons"> 
-        <div class="icon searchBox">
+    <div class="icons">
+      <div class="icon searchBox">
 
-            <input class="searchInput" type="text" name="" placeholder="Search..">
-            <button type="submit" class="searchButton" href="#">
-                <i class="material-icons fa fa-search">    
-                </i>
-            </button>
-        </div>
-        <div class="icon">
-            <a href="#"><i class="fa fa-user"></i></a>
-        </div>
-        <div class="icon">
-            <a href="#"><i class="fa fa-shopping-basket"></i></a>
-        </div>
-        <div class="icon">
-            <a href="#"><i class="fa fa-globe"></i></a>
-        </div>
+        <input class="searchInput" type="text" name="" placeholder="Search..">
+        <button type="submit" class="searchButton" href="#">
+          <i class="material-icons fa fa-search">
+          </i>
+        </button>
+      </div>
+      <div class="icon">
+       <a href="#"><i class="fa fa-shopping-basket"><span id="cart_counter">0</span></i></a>
+      </div>
+      <div class="icon">
+        <a href="#"><i class="fa fa-globe"></i></a>
+      </div>
     </div>
-</div>  
-<div class="navbar">
-  <a href="#">HOME</a> 
-  <a href="#">WATCH</a> 
-  <a href="#">ACCESSORIES</a> 
-  <a href="#">OFFER</a> 
-  <a href="#">SUMMER OFFER</a>
-</div>
+  </div>
+ 
 
-<div class="slideshow-container">
+  <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <img src="photos/slide1.jpg" style="width:100%">
-</div>
+    <div class="mySlides fade">
+      <img src="photos/slide1.jpg" style="width:100%">
+    </div>
 
-<div class="mySlides fade">
-  <img src="photos/slide2.jpg" style="width:100%">
-</div>
+    <div class="mySlides fade">
+      <img src="photos/slide2.jpg" style="width:100%">
+    </div>
 
-<div class="mySlides fade">
-  <img src="photos/slide3.jpg" style="width:100%">
-</div>
-<div class="dots">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-</div>
- <div class="grid">
- <div>
-   <img src="photos/montre1.jpg" alt="">
- </div>
- <div>
-   <img src="photos/montre2.jpg" alt="">
- </div>
- <div>
-   <img src="photos/montre3.jpg" alt="">
- </div>
- <div>
-   <img src="photos/montre1.jpg" alt="">
- </div>
- </div>
-<script src="dyn.js"></script>
+    <div class="mySlides fade">
+      <img src="photos/slide3.jpg" style="width:100%">
+    </div>
+    <div class="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+ 
+  <div class="menu-products">
 
+    <div class="menu">
+      <div class="titreMenu">Categories</div>
+      <ul id="myMenu">
+       <li><a class="category" href="#">Beauty</a></li>
+        <div id="beauty" class="components">
+          <div class="component">
+            <b>Women</b>
+            <a>Rouge à lèvre</a>
+            <a>Eye-liner</a>
+            <a>Mascara</a>
+            <a>Eyeshadow</a>
+          </div>
+        </div>
+        <li><a class="category" href="#">Accessories</a></li>
+        <li><a class="category" href="#">Phones & Computer</a></li>
+        <li><a class="category" href="#">Electronics</a></li>
+        <li><a class="category" href="#">Jewlery & Watches</a></li>
+        <li><a class="category" href="#">Clothes</a></li>
+      </ul>
+    </div>
+
+    <div class="products">
+      
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+    <div class="product">
+      <img class="product-img" src="photos/watch1.png" alt="">
+      <div class="product-name">J-P Monet</div>
+      <div class="product-price">
+        <div class="old-price"><p class="line">799$</p></div>
+        <div class="pourcentage">-40%</div>
+        <div class="new-price">499$</div>
+      </div>
+    </div>
+   
+  </div>
+
+  </div>
+
+
+  
+  <script src="includesJS/jQuery.js"></script>
+  <script src="dyn.js"></script>
 </body>
 </html>

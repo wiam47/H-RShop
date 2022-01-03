@@ -17,3 +17,19 @@ function showSlides() {
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 6000); 
 }
+
+
+$(document).ready(function(){
+  $(".category").mouseenter(function(){
+    var component = "#"+$(this).text().toLowerCase();
+    $(component).css("visibility", "visible");
+    var leftOffset = $(this).innerWidth()+"px";
+    $(component).css("left", leftOffset);
+  });
+  $(".category").mouseleave(function(){
+    var component = "#"+$(this).text().toLowerCase();
+    $(component).css("visibility", "hidden");
+  });
+  
+  
+});
